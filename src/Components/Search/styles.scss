@@ -1,0 +1,44 @@
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  padding: 48px;
+  text-align: center;
+}
+
+.search {
+  width: 35%;
+  margin: 0 auto 80px;
+  text-align: center;
+  padding: 24px;
+  border-radius: 20px;
+  background-color: rgb(45, 69, 168);
+  box-shadow: 2px 2px rgb(66, 87, 170), -2px 2px rgb(66, 87, 170);
+
+  form {
+    display: flex;
+    justify-content: center;
+    margin: 24px auto;
+    width: 75%;
+
+    .form-control {
+      border-radius: 4px;
+      outline: none;
+      border: none;
+      max-width: 75%;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      transition: transform 0.2s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    .btn {
+      background-color: rgb(106, 128, 216);
+      border-radius: 0 4px 4px 0;
+      border: none;
+      outline: none;
+    }
+  }
+}

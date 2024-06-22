@@ -1,0 +1,19 @@
+.profile {
+    display: flex;
+    background-color: rgb(29, 64, 129);
+    padding: 16px;
+    box-shadow: 1px 1px rgb(33, 72, 145), -1px 1px rgb(33, 72, 145);
+    border-radius: 8px;
+
+    span {
+        color: #f0f0f0;
+    }
+
+    img {
+        max-height: 140px;
+        max-width: 140px;
+        border-radius: 50%;
+        border: 8px solid darkslategray;
+        margin-right: 28px;
+    }
+}
