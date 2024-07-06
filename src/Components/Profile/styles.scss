@@ -4,16 +4,41 @@
     padding: 16px;
     box-shadow: 1px 1px rgb(33, 72, 145), -1px 1px rgb(33, 72, 145);
     border-radius: 8px;
+    margin-bottom: 24px;
 
     span {
         color: #f0f0f0;
+    }
+
+    .profile__info {
+        min-width: 220px;
+    }
+
+    .profile__text {
+        font-weight: bolder;
+        font-size: 18px;
     }
 
     img {
         max-height: 140px;
         max-width: 140px;
         border-radius: 50%;
-        border: 8px solid darkslategray;
         margin-right: 28px;
+    }
+
+    .graphDescriptionText {
+        font-size: 12px;
+        margin-left: 8px;
+    }
+
+    .graphLangs {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+        max-height: 200px;
+        width: 100%;
+        flex-wrap: wrap;
+        overflow-x: auto;
     }
 }
