@@ -18,6 +18,7 @@ function App() {
         id
         avatarUrl
         location
+        url
         following {
           totalCount
         }

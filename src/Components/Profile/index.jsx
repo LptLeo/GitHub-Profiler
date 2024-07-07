@@ -33,7 +33,7 @@ const Profile = ({ userData }) => {
 
     return (
         <div className="profile">
-            {userData && userData.avatarUrl && <img className="avatar" src={userData.avatarUrl} />}
+            {userData && userData.avatarUrl && <a href={userData.url} target="_blank"><img className="avatar" src={userData.avatarUrl} /></a>}
             <div className="profile__info">
                 {userData && (
                     <div>
