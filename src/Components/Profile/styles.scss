@@ -5,6 +5,8 @@
   box-shadow: 1px 1px rgb(33, 72, 145), -1px 1px rgb(33, 72, 145);
   border-radius: 8px;
   margin-bottom: 24px;
+  flex-direction: column;
+  max-width: 100%;
 
   span {
     color: #f0f0f0;
@@ -12,128 +14,183 @@
 
   .profile__info-container {
     display: flex;
+    flex-direction: column;
 
     .avatar {
-      max-height: 140px;
-      max-width: 140px;
+      max-height: 100%;
+      max-width: 100%;
       border-radius: 50%;
-      margin-right: 28px;
+      padding: 10%;
     }
 
     .profile__info {
-      min-width: 220px;
+      margin-bottom: 12px;
+
+      div {
+        display: flex;
+        align-items: center;
+        max-width: 100%;
+        overflow-x: auto;
+
+        span {
+          font-size: 14px;
+
+          &:first-child {
+            font-weight: bold;
+            margin-right: 6px;
+          }
+        }
+      }
     }
   }
 
-  .profile__text {
-    font-weight: bolder;
-    font-size: 18px;
-  }
-
-  .graphDescriptionText {
-    font-size: 12px;
-    margin-left: 8px;
+  .pieChart {
+    display: none;
   }
 
   .graphLangs {
     display: flex;
     justify-content: center;
     align-items: start;
-    flex-direction: column;
     max-height: 200px;
     width: 100%;
     flex-wrap: wrap;
     overflow-x: auto;
-  }
-}
 
-@media (max-width: 1024px) and (min-width: 769px) {
-  .pieChart {
-    display: none;
-  }
+    div {
+      margin-right: 1rem;
 
-  .graphLangs {
-    margin-left: 40px;
-    font-size: 12px;
+      svg {
+        height: 12px;
+        width: 12px;
+      }
 
-    .bi.bi-square-fill {
-      height: 12px;
-      width: 12px;
-    }
-  }
-
-  .profile__info {
-    span,
-    .profile__text {
-      font-size: 14px;
-    }
-  }
-}
-
-@media (max-width: 768px) and (min-width: 426px) {
-  .profile {
-    flex-direction: column;
-    align-items: center;
-
-    .profile__info-container {
-      width: 100%;
-      justify-content: space-around;
-
-      .avatar {
-        max-height: 180px;
-        max-width: 180px;
-        border-radius: 50%;
-        margin-right: 28px;
+      span {
+        font-size: 10px;
+        margin-left: 8px;
       }
     }
+  }
+}
 
-    .pieChart {
-      display: none;
-    }
-
+@media (min-width: 576px) {
+  .profile {
     .graphLangs {
-      margin-top: 48px;
+      div {
+        span {
+          font-size: 12px;
+        }
+      }
     }
   }
 }
 
-@media (max-width: 425px) {
+@media (min-width: 768px) {
   .profile {
-    flex-direction: column;
-    align-items: center;
-
     .profile__info-container {
-      width: 100%;
-      flex-direction: column;
+      flex-direction: row;
+      justify-content: space-around;
+      margin-bottom: 24px;
+
+      .avatar {
+        max-width: 10rem;
+        max-height: 10rem;
+        padding: 0;
+      }
 
       .profile__info {
-        span,
-        .profile__text {
-          font-size: 18px;
+        div {
+          span {
+            font-size: 16px;
+          }
         }
       }
 
+      .graphLangs {
+        div {
+          svg {
+            height: 14px;
+            width: 14px;
+          }
+
+          span {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .profile {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    .profile__info-container {
+      justify-content: flex-start;
+      margin-bottom: 4rem;
+
       .avatar {
-        max-height: 100%;
-        max-width: 100%;
-        border-radius: 50%;
-        margin-right: 28px;
-        padding: 40px;
+        margin-right: 4rem;
+      }
+
+      .profile__info {
+        div {
+          span {
+            font-size: 16px;
+          }
+        }
       }
     }
 
     .pieChart {
-      display: none;
+      display: block;
     }
 
     .graphLangs {
-      margin-top: 48px;
-      font-size: 18px;
-      max-height: 400px;
+      div {
+        svg {
+          height: 14px;
+          width: 14px;
+        }
 
-      .bi.bi-square-fill {
-        height: 12px;
-        width: 12px;
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .profile {
+    .profile__info-container {
+      .avatar {
+        max-width: 13rem;
+        max-height: 13rem;
+      }
+
+      .profile__info {
+        div {
+          span {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+
+    .graphLangs {
+      div {
+        svg {
+          height: 16px;
+          width: 16px;
+        }
+
+        span {
+          font-size: 16px;
+        }
       }
     }
   }

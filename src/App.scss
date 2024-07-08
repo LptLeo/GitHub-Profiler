@@ -30,8 +30,8 @@
       justify-content: center;
       align-items: center;
       padding: 0.25rem;
-      flex: 0 0 25%;
-      max-width: 25%;
+      flex: 0 0 100%;
+      max-width: 100%;
 
       .repositorie-container {
         display: flex;
@@ -52,6 +52,7 @@
             color: rgb(255 193 8);
             max-height: 48px;
             overflow-y: auto;
+            font-size: 18px;
           }
         }
 
@@ -75,91 +76,31 @@
   }
 }
 
-@media (max-width: 1024px) and (min-width: 769px) {
+@media (min-width: 768px) {
   .container {
     .container-load {
       .repositorie {
-        .repositorie-container {
-          a {
-            h5 {
-              font-size: 16px;
-            }
-          }
-
-          .lang-text {
-            font-size: 14px;
-          }
-
-          .lang-values {
-            font-size: 14px;
-          }
-
-          .repositorie-date {
-            font-size: 12px;
-          }
-        }
+        flex: 0 0 50%;
       }
     }
   }
 }
 
-@media (max-width: 768px) and (min-width: 426px) {
+@media (min-width: 992px) {
   .container {
     .container-load {
       .repositorie {
-        flex: 50%;
-        max-width: 50%;
-
-        .repositorie-container {
-          a {
-            h5 {
-              font-size: 16px;
-            }
-          }
-
-          .lang-text {
-            font-size: 14px;
-          }
-
-          .lang-values {
-            font-size: 14px;
-          }
-
-          .repositorie-date {
-            font-size: 14px;
-          }
-        }
+        flex: 0 0 33.33%;
       }
     }
   }
 }
 
-@media (max-width: 425px) {
+@media (min-width: 1400px) {
   .container {
     .container-load {
       .repositorie {
-        flex: 100%;
-        max-width: 100%;
-
-        .repositorie-container {
-          a {
-            h5 {
-              font-size: 18px;
-            }
-          }
-
-          .lang-text {
-            font-size: 14px;
-          }
-
-          .lang-values {
-            font-size: 14px;
-          }
-
-          .repositorie-date {
-            font-size: 14px;
-          }
-        }
+        flex: 0 0 25%;
       }
     }
   }

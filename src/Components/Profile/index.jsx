@@ -38,43 +38,43 @@ const Profile = ({ userData }) => {
                 <div className="profile__info">
                     {userData && (
                         <div>
-                            <span className="profile__text">User: </span>
+                            <span>User: </span>
                             <span> {userData.login} </span>
                         </div>
                     )}
                     {userData && (
                         <div>
-                            <span className="profile__text">Name: </span>
+                            <span>Name: </span>
                             <span> {userData.name} </span>
                         </div>
                     )}
                     {userData && (
                         <div>
-                            <span className="profile__text">ID: </span>
+                            <span>ID: </span>
                             <span> {userData.id} </span>
                         </div>
                     )}
                     {userData && userData.followers.totalCount !== null && (
                         <div>
-                            <span className="profile__text">Seguindo: </span>
+                            <span>Seguindo: </span>
                             <span> {userData.followers.totalCount} </span>
                         </div>
                     )}
                     {userData && userData.following.totalCount !== null && (
                         <div>
-                            <span className="profile__text">Seguidores: </span>
+                            <span>Seguidores: </span>
                             <span> {userData.following.totalCount} </span>
                         </div>
                     )}
                     {userData && userData.repositories.totalCount !== null && (
                         <div>
-                            <span className="profile__text">Repositórios (Públicos): </span>
+                            <span>Repositórios (Públicos): </span>
                             <span> {userData.repositories.totalCount} </span>
                         </div>
                     )}
                     {userData && (
                         <div>
-                            <span className="profile__text">Localização: </span>
+                            <span>Localização: </span>
                             <span> {userData.location} </span>
                         </div>
                     )}
@@ -101,11 +101,11 @@ const Profile = ({ userData }) => {
             </div>
             <div className="graphLangs">
                 {languageObjs.map((entry, index) => (
-                    <div className="me-1" key={`colorIcon-${index}`}>
+                    <div key={`colorIcon-${index}`}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill={entry.color} className="bi bi-square-fill" viewBox="0 0 16 16">
                             <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2z" />
                         </svg>
-                        <span className="graphDescriptionText">{entry.name} ({langPercent[index]}%)</span>
+                        <span>{entry.name} ({langPercent[index]}%)</span>
                     </div>
                 ))}
             </div>
