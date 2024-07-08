@@ -80,20 +80,20 @@ function App() {
                   <a href={repo.url} target="_blank"><h5>{repo.name}</h5></a>
                   <div className="h-100 pb-5">
                     <div>
-                      <span>{repo.languages.edges.length !== 0 ? <b>Linguagens: </b> : <b>Nenhuma linguagem</b>}</span>
+                      <span className="lang-text">{repo.languages.edges.length !== 0 ? <b>Linguagens: </b> : <b>Nenhuma linguagem</b>}</span>
                       {repo.languages.edges.map((lang, index) => (
                         <span key={lang.node.id}>
                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill={lang.node.color} className="bi bi-square-fill mb-1" viewBox="0 0 16 16">
                             <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2z" />
                           </svg>
                           <> </>
-                          {lang.node.name}{index < repo.languages.edges.length - 1 && ', '}
+                          <span className="lang-values">{lang.node.name}{index < repo.languages.edges.length - 1 && ', '}</span>
                         </span>
                       ))}
                     </div>
                   </div>
                   <div>
-                    <span><b>Data: </b> {repo.createdAt.substring(0, 10).replaceAll("-", " / ")} </span>
+                    <span className="repositorie-date"><b>Data: </b> {repo.createdAt.substring(0, 10).replaceAll("-", " / ")} </span>
                   </div>
                 </div>
               </div>

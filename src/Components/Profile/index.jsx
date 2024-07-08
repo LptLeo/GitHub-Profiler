@@ -33,52 +33,54 @@ const Profile = ({ userData }) => {
 
     return (
         <div className="profile">
-            {userData && userData.avatarUrl && <a href={userData.url} target="_blank"><img className="avatar" src={userData.avatarUrl} /></a>}
-            <div className="profile__info">
-                {userData && (
-                    <div>
-                        <span className="profile__text">User: </span>
-                        <span> {userData.login} </span>
-                    </div>
-                )}
-                {userData && (
-                    <div>
-                        <span className="profile__text">Name: </span>
-                        <span> {userData.name} </span>
-                    </div>
-                )}
-                {userData && (
-                    <div>
-                        <span className="profile__text">ID: </span>
-                        <span> {userData.id} </span>
-                    </div>
-                )}
-                {userData && userData.followers.totalCount !== null && (
-                    <div>
-                        <span className="profile__text">Seguindo: </span>
-                        <span> {userData.followers.totalCount} </span>
-                    </div>
-                )}
-                {userData && userData.following.totalCount !== null && (
-                    <div>
-                        <span className="profile__text">Seguidores: </span>
-                        <span> {userData.following.totalCount} </span>
-                    </div>
-                )}
-                {userData && userData.repositories.totalCount !== null && (
-                    <div>
-                        <span className="profile__text">Repositórios (Públicos): </span>
-                        <span> {userData.repositories.totalCount} </span>
-                    </div>
-                )}
-                {userData && (
-                    <div>
-                        <span className="profile__text">Localização: </span>
-                        <span> {userData.location} </span>
-                    </div>
-                )}
+            <div className="profile__info-container">
+                {userData && userData.avatarUrl && <a href={userData.url} target="_blank"><img className="avatar" src={userData.avatarUrl} /></a>}
+                <div className="profile__info">
+                    {userData && (
+                        <div>
+                            <span className="profile__text">User: </span>
+                            <span> {userData.login} </span>
+                        </div>
+                    )}
+                    {userData && (
+                        <div>
+                            <span className="profile__text">Name: </span>
+                            <span> {userData.name} </span>
+                        </div>
+                    )}
+                    {userData && (
+                        <div>
+                            <span className="profile__text">ID: </span>
+                            <span> {userData.id} </span>
+                        </div>
+                    )}
+                    {userData && userData.followers.totalCount !== null && (
+                        <div>
+                            <span className="profile__text">Seguindo: </span>
+                            <span> {userData.followers.totalCount} </span>
+                        </div>
+                    )}
+                    {userData && userData.following.totalCount !== null && (
+                        <div>
+                            <span className="profile__text">Seguidores: </span>
+                            <span> {userData.following.totalCount} </span>
+                        </div>
+                    )}
+                    {userData && userData.repositories.totalCount !== null && (
+                        <div>
+                            <span className="profile__text">Repositórios (Públicos): </span>
+                            <span> {userData.repositories.totalCount} </span>
+                        </div>
+                    )}
+                    {userData && (
+                        <div>
+                            <span className="profile__text">Localização: </span>
+                            <span> {userData.location} </span>
+                        </div>
+                    )}
+                </div>
             </div>
-            <div>
+            <div className="pieChart">
                 <PieChart width={300} height={200}>
                     <Pie
                         data={languageObjs}

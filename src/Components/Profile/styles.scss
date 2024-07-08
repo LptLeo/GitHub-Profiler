@@ -1,44 +1,140 @@
 .profile {
-    display: flex;
-    background-color: rgb(29, 64, 129);
-    padding: 16px;
-    box-shadow: 1px 1px rgb(33, 72, 145), -1px 1px rgb(33, 72, 145);
-    border-radius: 8px;
-    margin-bottom: 24px;
+  display: flex;
+  background-color: rgb(29, 64, 129);
+  padding: 16px;
+  box-shadow: 1px 1px rgb(33, 72, 145), -1px 1px rgb(33, 72, 145);
+  border-radius: 8px;
+  margin-bottom: 24px;
 
-    span {
-        color: #f0f0f0;
+  span {
+    color: #f0f0f0;
+  }
+
+  .profile__info-container {
+    display: flex;
+
+    .avatar {
+      max-height: 140px;
+      max-width: 140px;
+      border-radius: 50%;
+      margin-right: 28px;
     }
 
     .profile__info {
-        min-width: 220px;
+      min-width: 220px;
     }
+  }
 
+  .profile__text {
+    font-weight: bolder;
+    font-size: 18px;
+  }
+
+  .graphDescriptionText {
+    font-size: 12px;
+    margin-left: 8px;
+  }
+
+  .graphLangs {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    max-height: 200px;
+    width: 100%;
+    flex-wrap: wrap;
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .pieChart {
+    display: none;
+  }
+
+  .graphLangs {
+    margin-left: 40px;
+    font-size: 12px;
+
+    .bi.bi-square-fill {
+      height: 12px;
+      width: 12px;
+    }
+  }
+
+  .profile__info {
+    span,
     .profile__text {
-        font-weight: bolder;
-        font-size: 18px;
+      font-size: 14px;
     }
+  }
+}
 
-    img {
-        max-height: 140px;
-        max-width: 140px;
+@media (max-width: 768px) and (min-width: 426px) {
+  .profile {
+    flex-direction: column;
+    align-items: center;
+
+    .profile__info-container {
+      width: 100%;
+      justify-content: space-around;
+
+      .avatar {
+        max-height: 180px;
+        max-width: 180px;
         border-radius: 50%;
         margin-right: 28px;
+      }
     }
 
-    .graphDescriptionText {
-        font-size: 12px;
-        margin-left: 8px;
+    .pieChart {
+      display: none;
     }
 
     .graphLangs {
-        display: flex;
-        justify-content: center;
-        align-items: start;
-        flex-direction: column;
-        max-height: 200px;
-        width: 100%;
-        flex-wrap: wrap;
-        overflow-x: auto;
+      margin-top: 48px;
     }
+  }
+}
+
+@media (max-width: 425px) {
+  .profile {
+    flex-direction: column;
+    align-items: center;
+
+    .profile__info-container {
+      width: 100%;
+      flex-direction: column;
+
+      .profile__info {
+        span,
+        .profile__text {
+          font-size: 18px;
+        }
+      }
+
+      .avatar {
+        max-height: 100%;
+        max-width: 100%;
+        border-radius: 50%;
+        margin-right: 28px;
+        padding: 40px;
+      }
+    }
+
+    .pieChart {
+      display: none;
+    }
+
+    .graphLangs {
+      margin-top: 48px;
+      font-size: 18px;
+      max-height: 400px;
+
+      .bi.bi-square-fill {
+        height: 12px;
+        width: 12px;
+      }
+    }
+  }
 }

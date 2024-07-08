@@ -42,3 +42,27 @@
     }
   }
 }
+
+@media (max-width: 1024px) and (min-width: 759px) {
+  .search {
+    form {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 768px) and (min-width: 426px) {
+  .search {
+    width: 50%;
+  }
+}
+
+@media (max-width: 425px) {
+  .search {
+    width: 90%;
+
+    form {
+      width: 100%;
+    }
+  }
+}

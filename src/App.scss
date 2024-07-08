@@ -17,6 +17,7 @@
   text-align: center;
   height: 70vh;
 }
+
 .container {
   background-color: rgb(25, 55, 109);
   box-shadow: 1px 0 1px rgba(0, 0, 0, 0.3), -1px 0 1px rgba(0, 0, 0, 0.3);
@@ -68,6 +69,96 @@
         .repositories-languages {
           max-height: 120px;
           overflow-y: auto;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .container {
+    .container-load {
+      .repositorie {
+        .repositorie-container {
+          a {
+            h5 {
+              font-size: 16px;
+            }
+          }
+
+          .lang-text {
+            font-size: 14px;
+          }
+
+          .lang-values {
+            font-size: 14px;
+          }
+
+          .repositorie-date {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) and (min-width: 426px) {
+  .container {
+    .container-load {
+      .repositorie {
+        flex: 50%;
+        max-width: 50%;
+
+        .repositorie-container {
+          a {
+            h5 {
+              font-size: 16px;
+            }
+          }
+
+          .lang-text {
+            font-size: 14px;
+          }
+
+          .lang-values {
+            font-size: 14px;
+          }
+
+          .repositorie-date {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .container {
+    .container-load {
+      .repositorie {
+        flex: 100%;
+        max-width: 100%;
+
+        .repositorie-container {
+          a {
+            h5 {
+              font-size: 18px;
+            }
+          }
+
+          .lang-text {
+            font-size: 14px;
+          }
+
+          .lang-values {
+            font-size: 14px;
+          }
+
+          .repositorie-date {
+            font-size: 14px;
+          }
         }
       }
     }
