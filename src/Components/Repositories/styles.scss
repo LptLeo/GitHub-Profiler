@@ -1,0 +1,53 @@
+.filter {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 1.5rem;
+
+    &-input {
+        width: 100%;
+        padding: 12px;
+        border-radius: 24px;
+        border: none;
+        outline: none;
+        color: rgb(50, 50, 50);
+        transition: box-shadow 0.2s ease-in-out;
+
+        &:focus {
+            box-shadow: 4px 4px 4px rgb(28, 85, 165), -4px -4px 4px rgb(28, 85, 165);
+        }
+    }
+
+}
+
+@media (min-width: 768px) {
+    .filter {
+        &-input {
+            width: 80%;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .filter {
+        &-input {
+            width: 65%;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .filter {
+        &-input {
+            width: 55%;
+        }
+    }
+}
+
+@media (min-width: 1400px) {
+    .filter {
+        &-input {
+            width: 50%;
+        }
+    }
+}
