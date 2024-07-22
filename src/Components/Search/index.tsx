@@ -2,9 +2,13 @@ import "./styles.scss"
 
 import { useState, useRef, useEffect } from "react"
 
-const Search = ({ name }) => {
+interface SearchProps {
+  name: (name: string) => void
+}
+
+const Search = ({ name }: SearchProps): JSX.Element => {
   const [inputValue, setInputValue] = useState("")
-  const inputRef = useRef(null)
+  const inputRef = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
     if (inputRef.current) {
@@ -12,11 +16,11 @@ const Search = ({ name }) => {
     }
   }, [])
 
-  const handleClick = (value) => {
+  const handleClick = (value: string) => {
     name(value)
   }
 
-  const handleKey = (event) => {
+  const handleKey = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter") {
       event.preventDefault()
       handleClick(inputValue)

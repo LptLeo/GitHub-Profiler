@@ -11,7 +11,7 @@ import Repositories from './Components/Repositories'
 function App() {
   const [profile, setProfile] = useState("")
 
-  const { loading, data, error } = useQuery(gql`
+  const { data, loading, error } = useQuery(gql`
     query Repos {
       user(login: "${profile}") {
         login
@@ -67,13 +67,7 @@ function App() {
       <div className="container">
         <Search name={setProfile} />
         <div className="container-load">
-          {profile === "" ? (
-            <div className="insert-message">
-              <span className="text-warning fs-1">Insira um usuário acima</span>
-            </div>
-          ) : (
-            <Profile userData={data && data.user} />
-          )}
+          <Profile userData={data && data.user} profile={profile} />
           <Repositories userData={data && data.user} />
         </div>
       </div>
